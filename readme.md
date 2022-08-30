@@ -73,7 +73,7 @@
 ```
 s_dot = -beta_eff_loss*s*i_total - alpha*s + wan*sr; 
 ```
- $V_L$ = - $V_L$ infected ($V_L$ \rightarrow $I$)- $V_L$ take vaccine ($V_L\rightarrowV_F$) + $V_F$ lose immunity ($V_F\rightarrowV_L$)
+ $V_L$ = - $V_L$ infected ( $V_L$ $\rightarrow$ $I$ )- $V_L$ take vaccine ($V_L\rightarrowV_F$) + $V_F$ lose immunity ($V_F\rightarrowV_L$)
 
 ```
 i_dot = beta_eff_loss*s*i_total + beta_eff_loss*v1*i_total + beta_eff*sr*i_total - gamma*i;
