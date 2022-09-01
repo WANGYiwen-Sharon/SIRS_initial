@@ -73,22 +73,22 @@
 ```
 s_dot = -beta_eff_loss*s*i_total - alpha*s + wan*sr; 
 ```
- $V_L$ = - $V_L$ infected ( $V_L$ $\rightarrow$ $I$ )- $V_L$ take vaccine ( $V_L$ $\rightarrow$ $V_F$ ) + $V_F$ lose immunity ($V_F$ $\rightarrow$ $V_L$)
+ $V_L$ = - $V_L$ infected ( $V_L$ $\rightarrow$ $I$ )- $V_L$ take vaccine ( $V_L$ $\rightarrow$ $V_F$ ) + $V_F$ lose immunity ( $V_F$ $\rightarrow$ $V_L$)
 
 ```
 i_dot = beta_eff_loss*s*i_total + beta_eff_loss*v1*i_total + beta_eff*sr*i_total - gamma*i;
 ```
- $I$ = $V_L, V_1, V_F$ infected ($V_L,V_1,V_F \rightarrow I$)– $I$ recovered ($I \rightarrow R$)
+ $I$ = $V_L, V_1, V_F$ infected ( $V_L,V_1,V_F$ $\rightarrow$ $I$ )– $I$ recovered ( $I$ $\rightarrow$ $R$)
 
 ```
 sr_dot = alpha*(s + sr + sl_n + sr_n) - beta_eff*sr*i_total - alpha*sr - wan*sr;
 ```
- $V_F$ = $V_L,V_F,S_L,S_R$ take vaccines – $V_F$ infected - $V_F$ repeated take vaccines - $V_F$ lose immunity ($V_F \rightarrow V_L$)
+ $V_F$ = $V_L,V_F,S_L,S_R$ take vaccines – $V_F$ infected - $V_F$ repeated take vaccines - $V_F$ lose immunity ($V_F$ $\rightarrow$ $V_L$)
 
 ```
 v1_dot = alpha*s0_n - wan*v1 - beta_eff_loss*v1*i_total;
 ```
- $V_1$ = $S_0$ take first vaccine ($S_0 \rightarrow V_1$) – v1 lose immunity ($V_1 \rightarrow S_0$) – v1 infected
+ $V_1$ = $S_0$ take first vaccine ($S_0$ $\rightarrow$ $V_1$) – v1 lose immunity ($V_1$ $\rightarrow$ $S_0$) – v1 infected
 
 ```
 s0_n_dot = -beta_naive*s0_n*i_total - alpha*s0_n + wan*v1;
